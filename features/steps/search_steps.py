@@ -11,7 +11,7 @@ def step_impl(context):
 def step_impl(context):
     context.home_page.click_login_button()
 
-@step('I see the "thinkmoney" homepage')
+@step('I see the thinkmoney homepage')
 def step_impl(context):
     assert_equal(context.home_page.get_page_title(), "Digital banking for everyone | thinkmoney")
     assert_equal(context.home_page.get_header(), "Digital banking for everyone")
@@ -27,7 +27,7 @@ def step_impl(context):
 def step_impl(context):
     context.manage_your_money_page.click_continue_to_login_button()
 
-@step('I see the "Login" page')
+@step('I see the Login page')
 def step_impl(context):
     context.browser.wait_for_ajax()
     window_after = context.browser.window_handles(1)
