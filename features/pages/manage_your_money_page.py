@@ -20,7 +20,7 @@ class ManageYourMoneyPage(Browser):
 
     def wait_for_element_login_button(self):
         try:
-            element_present = expected_conditions.visibility_of_element_located(*ManageYourMoneyPageLocator.continue_to_login_button)
-            WebDriverWait(self.driver, 10).until(element_present)
+            element_visible = expected_conditions.visibility_of_element_located(*ManageYourMoneyPageLocator.continue_to_login_button)
+            WebDriverWait(self.driver, 10).until(element_visible)
         except Exception:
             print("Timed out waiting for page to load")
